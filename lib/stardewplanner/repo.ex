@@ -1,4 +1,4 @@
-defmodule Stardewplanner.Repo do
+defmodule StardewPlanner.Repo do
   use Ecto.Repo,
     otp_app: :stardewplanner,
     adapter: Ecto.Adapters.Postgres

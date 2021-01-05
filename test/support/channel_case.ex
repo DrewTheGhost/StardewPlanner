@@ -1,4 +1,4 @@
-defmodule StardewplannerWeb.ChannelCase do
+defmodule StardewPlannerWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -11,7 +11,7 @@ defmodule StardewplannerWeb.ChannelCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use StardewplannerWeb.ChannelCase, async: true`, although
+  by setting `use StardewPlannerWeb.ChannelCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -21,18 +21,18 @@ defmodule StardewplannerWeb.ChannelCase do
     quote do
       # Import conveniences for testing with channels
       import Phoenix.ChannelTest
-      import StardewplannerWeb.ChannelCase
+      import StardewPlannerWeb.ChannelCase
 
       # The default endpoint for testing
-      @endpoint StardewplannerWeb.Endpoint
+      @endpoint StardewPlannerWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Stardewplanner.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(StardewPlanner.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Stardewplanner.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(StardewPlanner.Repo, {:shared, self()})
     end
 
     :ok

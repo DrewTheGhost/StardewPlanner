@@ -1,7 +1,7 @@
 use Mix.Config
 
 # Configure your database
-config :stardewplanner, Stardewplanner.Repo,
+config :stardewplanner, StardewPlanner.Repo,
   username: "postgres",
   password: "postgres",
   database: "stardewplanner_dev",
@@ -15,7 +15,7 @@ config :stardewplanner, Stardewplanner.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :stardewplanner, StardewplannerWeb.Endpoint,
+config :stardewplanner, StardewPlannerWeb.Endpoint,
   http: [port: 4000],
   https: [
     port: 4001,
@@ -61,7 +61,7 @@ config :stardewplanner, StardewplannerWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :stardewplanner, StardewplannerWeb.Endpoint,
+config :stardewplanner, StardewPlannerWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",

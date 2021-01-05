@@ -1,4 +1,4 @@
-defmodule StardewplannerWeb.Endpoint do
+defmodule StardewPlannerWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :stardewplanner
 
   # The session will be stored in the cookie and signed,
@@ -10,7 +10,7 @@ defmodule StardewplannerWeb.Endpoint do
     signing_salt: "B4m3+EEW"
   ]
 
-  socket "/socket", StardewplannerWeb.UserSocket,
+  socket "/socket", StardewPlannerWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -50,5 +50,5 @@ defmodule StardewplannerWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug StardewplannerWeb.Router
+  plug StardewPlannerWeb.Router
 end

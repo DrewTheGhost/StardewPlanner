@@ -1,5 +1,5 @@
-defmodule StardewplannerWeb.PageLiveTest do
-  use StardewplannerWeb.ConnCase
+defmodule StardewPlannerWeb.PageLiveTest do
+  use StardewPlannerWeb.ConnCase
 
   import Phoenix.LiveViewTest
 

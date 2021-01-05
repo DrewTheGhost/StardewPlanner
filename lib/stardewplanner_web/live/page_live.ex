@@ -1,5 +1,5 @@
-defmodule StardewplannerWeb.PageLive do
-  use StardewplannerWeb, :live_view
+defmodule StardewPlannerWeb.PageLive do
+  use StardewPlannerWeb, :live_view
 
   @impl true
   def mount(_params, _session, socket) do
@@ -26,7 +26,7 @@ defmodule StardewplannerWeb.PageLive do
   end
 
   defp search(query) do
-    if not StardewplannerWeb.Endpoint.config(:code_reloader) do
+    if not StardewPlannerWeb.Endpoint.config(:code_reloader) do
       raise "action disabled when not in development"
     end
 

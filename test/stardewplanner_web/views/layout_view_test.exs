@@ -1,5 +1,5 @@
-defmodule StardewplannerWeb.LayoutViewTest do
-  use StardewplannerWeb.ConnCase, async: true
+defmodule StardewPlannerWeb.LayoutViewTest do
+  use StardewPlannerWeb.ConnCase, async: true
 
   # When testing helpers, you may want to import Phoenix.HTML and
   # use functions such as safe_to_string() to convert the helper

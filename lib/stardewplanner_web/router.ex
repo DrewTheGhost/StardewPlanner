@@ -1,11 +1,11 @@
-defmodule StardewplannerWeb.Router do
-  use StardewplannerWeb, :router
+defmodule StardewPlannerWeb.Router do
+  use StardewPlannerWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, {StardewplannerWeb.LayoutView, :root}
+    plug :put_root_layout, {StardewPlannerWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -14,15 +14,15 @@ defmodule StardewplannerWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", StardewplannerWeb do
+  scope "/", StardewPlannerWeb do
     pipe_through :browser
 
     live "/", PageLive, :index
-    live "/stardew", Stardewplanner
+    live "/stardew", StardewPlanner
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", StardewplannerWeb do
+  # scope "/api", StardewPlannerWeb do
   #   pipe_through :api
   # end
 
@@ -38,7 +38,7 @@ defmodule StardewplannerWeb.Router do
 
     scope "/" do
       pipe_through :browser
-      live_dashboard "/dashboard", metrics: StardewplannerWeb.Telemetry
+      live_dashboard "/dashboard", metrics: StardewPlannerWeb.Telemetry
     end
   end
 end

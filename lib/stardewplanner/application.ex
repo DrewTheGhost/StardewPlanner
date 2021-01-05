@@ -1,4 +1,4 @@
-defmodule Stardewplanner.Application do
+defmodule StardewPlanner.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -8,27 +8,27 @@ defmodule Stardewplanner.Application do
   def start(_type, _args) do
     children = [
       # Start the Ecto repository
-      Stardewplanner.Repo,
+      StardewPlanner.Repo,
       # Start the Telemetry supervisor
-      StardewplannerWeb.Telemetry,
+      StardewPlannerWeb.Telemetry,
       # Start the PubSub system
-      {Phoenix.PubSub, name: Stardewplanner.PubSub},
+      {Phoenix.PubSub, name: StardewPlanner.PubSub},
       # Start the Endpoint (http/https)
-      StardewplannerWeb.Endpoint
-      # Start a worker by calling: Stardewplanner.Worker.start_link(arg)
-      # {Stardewplanner.Worker, arg}
+      StardewPlannerWeb.Endpoint
+      # Start a worker by calling: StardewPlanner.Worker.start_link(arg)
+      # {StardewPlanner.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Stardewplanner.Supervisor]
+    opts = [strategy: :one_for_one, name: StardewPlanner.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    StardewplannerWeb.Endpoint.config_change(changed, removed)
+    StardewPlannerWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

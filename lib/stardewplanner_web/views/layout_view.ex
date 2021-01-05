@@ -1,3 +1,3 @@
-defmodule StardewplannerWeb.LayoutView do
-  use StardewplannerWeb, :view
+defmodule StardewPlannerWeb.LayoutView do
+  use StardewPlannerWeb, :view
 end

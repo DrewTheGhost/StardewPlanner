@@ -1,5 +1,5 @@
-defmodule StardewplannerWeb.Stardewplanner do
-  use StardewplannerWeb, :live_view
+defmodule StardewPlannerWeb.StardewPlanner do
+  use StardewPlannerWeb, :live_view
 
   def mount(_params, _session, socket) do
     {:ok, assign(socket, :test, 10)}

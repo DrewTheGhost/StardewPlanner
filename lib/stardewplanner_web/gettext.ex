@@ -1,11 +1,11 @@
-defmodule StardewplannerWeb.Gettext do
+defmodule StardewPlannerWeb.Gettext do
   @moduledoc """
   A module providing Internationalization with a gettext-based API.
 
   By using [Gettext](https://hexdocs.pm/gettext),
   your module gains a set of macros for translations, for example:
 
-      import StardewplannerWeb.Gettext
+      import StardewPlannerWeb.Gettext
 
       # Simple translation
       gettext("Here is the string to translate")

@@ -8,14 +8,14 @@
 use Mix.Config
 
 config :stardewplanner,
-  ecto_repos: [Stardewplanner.Repo]
+  ecto_repos: [StardewPlanner.Repo]
 
 # Configures the endpoint
-config :stardewplanner, StardewplannerWeb.Endpoint,
+config :stardewplanner, StardewPlannerWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "/BZ7WKritoy3nOVx21I6ZVMsU7vccvUdmZ65qUbFI0VmFxFlA5florzcK0+dfN9R",
-  render_errors: [view: StardewplannerWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: Stardewplanner.PubSub,
+  render_errors: [view: StardewPlannerWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: StardewPlanner.PubSub,
   live_view: [signing_salt: "QyaZ6lis"]
 
 # Configures Elixir's Logger

@@ -1,4 +1,4 @@
-defmodule StardewplannerWeb.ConnCase do
+defmodule StardewPlannerWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,7 +11,7 @@ defmodule StardewplannerWeb.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use StardewplannerWeb.ConnCase, async: true`, although
+  by setting `use StardewPlannerWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -22,20 +22,20 @@ defmodule StardewplannerWeb.ConnCase do
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import StardewplannerWeb.ConnCase
+      import StardewPlannerWeb.ConnCase
 
-      alias StardewplannerWeb.Router.Helpers, as: Routes
+      alias StardewPlannerWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint StardewplannerWeb.Endpoint
+      @endpoint StardewPlannerWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Stardewplanner.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(StardewPlanner.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Stardewplanner.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(StardewPlanner.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

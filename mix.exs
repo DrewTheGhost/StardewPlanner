@@ -1,4 +1,4 @@
-defmodule Stardewplanner.MixProject do
+defmodule StardewPlanner.MixProject do
   use Mix.Project
 
   def project do
@@ -19,7 +19,7 @@ defmodule Stardewplanner.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Stardewplanner.Application, []},
+      mod: {StardewPlanner.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

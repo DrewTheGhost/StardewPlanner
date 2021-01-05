@@ -1,5 +1,5 @@
-defmodule StardewplannerWeb.ErrorView do
-  use StardewplannerWeb, :view
+defmodule StardewPlannerWeb.ErrorView do
+  use StardewPlannerWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

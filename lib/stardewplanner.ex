@@ -1,6 +1,6 @@
-defmodule Stardewplanner do
+defmodule StardewPlanner do
   @moduledoc """
-  Stardewplanner keeps the contexts that define your domain
+  StardewPlanner keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless
