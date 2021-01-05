@@ -18,7 +18,7 @@ defmodule StardewplannerWeb.Router do
     pipe_through :browser
 
     live "/", PageLive, :index
-    live "/stardew", StardewPlanner
+    live "/stardew", Stardewplanner
   end
 
   # Other scopes may use custom stacks.

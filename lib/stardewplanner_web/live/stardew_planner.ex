@@ -1,4 +1,4 @@
-defmodule StardewplannerWeb.StardewPlanner do
+defmodule StardewplannerWeb.Stardewplanner do
   use StardewplannerWeb, :live_view
 
   def mount(_params, _session, socket) do
